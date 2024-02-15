@@ -17,6 +17,7 @@
     "ContainerPlayerCreativeMixin",
     "EntityMixin",
     "ItemToolShovelMixin",
+    "RenderBlocksMixin",
     "SurfaceGeneratorOverworldMixin",
     "WorldFeatureLabyrinthMixin"
   ],

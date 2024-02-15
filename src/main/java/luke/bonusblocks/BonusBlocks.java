@@ -1,6 +1,7 @@
 package luke.bonusblocks;
 
 import luke.bonusblocks.block.*;
+import luke.bonusblocks.block.BlockCandle;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.client.render.block.color.BlockColorGrass;
 import net.minecraft.client.render.block.color.BlockColorLeavesOak;
@@ -829,6 +830,32 @@ public class BonusBlocks implements ModInitializer, RecipeEntrypoint, ClientStar
             .setHardness(3.0f)
             .setTextures("olivinebrick.png")
             .build(new BlockStairs(brickOlivine, blockID++));
+    public static final Block customStairs = new BlockBuilder(MOD_ID)
+            .setBlockSound(new BlockSound("step.stone", "step.stone", 1.0f, 1.0f))
+            .setHardness(3.0f)
+            .setResistance(10.0f)
+            .setUseInternalLight()
+            .setVisualUpdateOnMetadata()
+            .setBlockModel(new BlockModelRenderBlocks(686))
+            .build(new BlockSuperStairs("super.stairs", blockID++));
+    public static final Block customSlab = new BlockBuilder(MOD_ID)
+            .setBlockSound(new BlockSound("step.stone", "step.stone", 1.0f, 1.0f))
+            .setHardness(3.0f)
+            .setResistance(10.0f)
+            .setUseInternalLight()
+            .setVisualUpdateOnMetadata()
+            .setItemBlock(ItemBlockSlab::new)
+            .setBlockModel(new BlockModelRenderBlocks(687))
+            .build(new BlockSuperSlab("super.slab", blockID++));
+    public static final Block customFence = new BlockBuilder(MOD_ID)
+            .setBlockSound(new BlockSound("step.stone", "step.stone", 1.0f, 1.0f))
+            .setHardness(3.0f)
+            .setResistance(10.0f)
+            .setUseInternalLight()
+            .setVisualUpdateOnMetadata()
+            .setBlockModel(new BlockModelRenderBlocks(688))
+            .setTags(BlockTags.FENCES_CONNECT)
+            .build(new BlockSuperFence("super.fence", blockID++));
 
     @Override
     public void onInitialize() {
